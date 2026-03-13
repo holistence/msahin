@@ -1,41 +1,282 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Aşkonomi | Piyasalar ve Arzular</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; }
-        .hero { background: #1a2a6c; color: white; padding: 60px 20px; text-align: center; }
-        .nav-menu { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; padding: 10px; display: flex; justify-content: center; gap: 20px; z-index: 100; }
-        .section { max-width: 800px; margin: 30px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        h2 { color: #b21f1f; border-bottom: 2px solid #b21f1f; padding-bottom: 10px; }
-        .quote { font-style: italic; color: #555; border-left: 4px solid #fdbb2d; padding-left: 15px; margin: 20px 0; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akademik Web Sitesi</title>
+  <meta name="description" content="Akademik profil, dersler, yayınlar ve iletişim bilgileri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
 
-<div class="hero">
-    <h1>AŞKONOMİ</h1>
-    <p>Piyasalar, Arzular ve İnsan Kalbi</p>
-</div>
+  <header class="header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">M. Şahin</a>
 
-<div class="nav-menu">
-    <a href="#giris">Giriş</a>
-    <a href="#bolum1">Bölüm 1</a>
-    <a href="#bolum2">Bölüm 2</a>
-    <a href="#bolum3">Bölüm 3</a>
-</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-<div id="giris" class="section">
-    <h2>Giriş: Aşık Olan ve Hesap Yapan Hayvan</h2>
-    <p>İnsanı diğer canlılardan ayıran iki özellik vardır: insan aşık olabilen bir hayvandır ve insan iktisadi bir hayvandır[cite: 263]. Bu çalışmada söz konusu bağ ortaya konulmaya çalışılmıştır[cite: 267].</p>
-    <div class="quote">"Ahlak insanların dünyanın nasıl işlemesini istediklerini gösterir; iktisat ise dünyanın aslında nasıl işlediğini." [cite: 273]</div>
-</div>
-
-<div id="bolum1" class="section">
-    <h2>Bölüm 1: Aşkın Mikroekonomisi</h2>
-    <p>Aşk kıt bir kaynaktır[cite: 451]. İktisadın tanımı, kıt kaynaklarla sınırsız ihtiyaçların dengelenmesi üzerine kuruludur[cite: 452]. Hiçbir toplum, onu isteyen herkese yetecek kadar sevgi ve bağlılık üretememiştir[cite: 454].</p>
+      <nav class="nav desktop-nav" aria-label="Ana menü">
+        <a href="#hero">Ana Sayfa</a>
+        <a href="#about">Hakkımda</a>
+        <a href="#courses">Dersler</a>
+        <a href="#publications">Akademik Çalışmalar</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">İletişim</a>
+      </nav>
     </div>
 
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobil menü">
+      <a href="#hero">Ana Sayfa</a>
+      <a href="#about">Hakkımda</a>
+      <a href="#courses">Dersler</a>
+      <a href="#publications">Akademik Çalışmalar</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">İletişim</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Akademik Profil</span>
+          <h1>Daha modern, hareketli ve etkileyici bir akademik web sitesi</h1>
+          <p class="lead">
+            Dersler, yayınlar, özgeçmiş ve iletişim bilgilerini tek bir yerde sunan,
+            mobil uyumlu ve GitHub Pages ile yayınlanabilir modern bir yapı.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#courses" class="btn btn-primary">Dersleri İncele</a>
+            <a href="#publications" class="btn btn-secondary">Yayınları Gör</a>
+          </div>
+
+          <ul class="hero-stats">
+            <li><strong>12+</strong><span>Ders İçeriği</span></li>
+            <li><strong>20+</strong><span>Yayın / Çalışma</span></li>
+            <li><strong>100%</strong><span>Mobil Uyumlu</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-card reveal reveal-delay">
+          <div class="profile-card glass">
+            <div class="profile-badge">Dr. Öğr. Üyesi</div>
+            <h2>Akademik Web Profili</h2>
+            <p>
+              Bu alanı adınız, ünvanınız, uzmanlık alanlarınız, kurum bilginiz ve kısa özgeçmişiniz için düzenleyebilirsiniz.
+            </p>
+            <div class="tags">
+              <span>Girişimcilik</span>
+              <span>İnsan Kaynakları</span>
+              <span>Yönetim</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Hakkımda</span>
+          <h2>Akademik kimliğinizi güçlü bir ilk izlenimle sunun</h2>
+          <p>
+            Bu bölüme kısa biyografi, araştırma ilgi alanları, çalışma alanları ve akademik yaklaşımınızı ekleyebilirsiniz.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="info-card glass reveal">
+            <h3>Kısa Biyografi</h3>
+            <p>
+              Akademik kariyeriniz, uzmanlık alanlarınız ve kurum içindeki rolünüzü burada anlatabilirsiniz.
+              Ziyaretçiler bu alan sayesinde sizi hızlıca tanır.
+            </p>
+          </article>
+
+          <article class="info-card glass reveal reveal-delay">
+            <h3>Uzmanlık Alanları</h3>
+            <p>
+              Girişimcilik, insan kaynakları yönetimi, örgütsel davranış, liderlik, stratejik yönetim gibi
+              alanları etiket veya liste olarak gösterebilirsiniz.
+            </p>
+          </article>
+
+          <article class="info-card glass reveal reveal-delay-2">
+            <h3>Akademik Yaklaşım</h3>
+            <p>
+              Ders anlatım tarzınız, araştırma perspektifiniz ve öğrencilerle kurduğunuz iletişimi öne çıkaran
+              bir açıklama buraya eklenebilir.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Dersler</span>
+          <h2>Ders içeriklerini modern kart yapısıyla sergileyin</h2>
+          <p>Her ders için kısa açıklama, içerik, hedef ve materyal bağlantıları ekleyebilirsiniz.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="course-card glass reveal">
+            <div class="card-top">
+              <span class="pill">Lisans</span>
+              <span class="card-number">01</span>
+            </div>
+            <h3>Girişimcilik</h3>
+            <p>Girişimcilik ekosistemi, iş fikri geliştirme, değer önerisi ve iş modeli odaklı ders içeriği.</p>
+            <a href="#" class="card-link">Detayları ekle</a>
+          </article>
+
+          <article class="course-card glass reveal reveal-delay">
+            <div class="card-top">
+              <span class="pill">Lisans</span>
+              <span class="card-number">02</span>
+            </div>
+            <h3>İnsan Kaynakları Yönetimi</h3>
+            <p>İşe alım, performans yönetimi, yetenek geliştirme ve çağdaş İK uygulamalarını kapsayan ders.</p>
+            <a href="#" class="card-link">Detayları ekle</a>
+          </article>
+
+          <article class="course-card glass reveal reveal-delay-2">
+            <div class="card-top">
+              <span class="pill">Seçmeli</span>
+              <span class="card-number">03</span>
+            </div>
+            <h3>Örgütsel Davranış</h3>
+            <p>Bireysel ve grup davranışları, motivasyon, liderlik ve kurum kültürü ekseninde içerik.</p>
+            <a href="#" class="card-link">Detayları ekle</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Akademik Çalışmalar</span>
+          <h2>Yayınlarınızı okunabilir ve filtrelenebilir biçimde listeleyin</h2>
+          <p>Aşağıdaki yapı makale, bildiri, kitap bölümü ve projeleri sunmak için uygundur.</p>
+        </div>
+
+        <div class="publication-list">
+          <article class="publication-item glass reveal">
+            <div>
+              <span class="pub-type">Makale</span>
+              <h3>Örnek Yayın Başlığı Buraya Gelecek</h3>
+              <p>Yazar Adı, Yazar Adı — <em>Dergi Adı</em>, 2025</p>
+            </div>
+            <a href="#" class="btn btn-small">PDF</a>
+          </article>
+
+          <article class="publication-item glass reveal reveal-delay">
+            <div>
+              <span class="pub-type">Bildiri</span>
+              <h3>Ulusal / Uluslararası Bildiri Başlığı</h3>
+              <p>Yazar Adı — Kongre / Sempozyum Adı, 2024</p>
+            </div>
+            <a href="#" class="btn btn-small">Detay</a>
+          </article>
+
+          <article class="publication-item glass reveal reveal-delay-2">
+            <div>
+              <span class="pub-type">Kitap Bölümü</span>
+              <h3>Kitap Bölümü veya Araştırma Projesi Başlığı</h3>
+              <p>Editör / Yayıncı Bilgisi, 2023</p>
+            </div>
+            <a href="#" class="btn btn-small">İncele</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cv">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">CV</span>
+          <h2>Özgeçmiş ve akademik kilometre taşları</h2>
+          <p>Bu bölüm ziyaretçilerin kariyer yolculuğunuzu hızlıca incelemesini sağlar.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item glass reveal">
+            <span class="timeline-year">2025</span>
+            <div>
+              <h3>Akademik Görev / Ünvan</h3>
+              <p>Buraya kurum, görev ve kısa açıklama bilgisi yazılabilir.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item glass reveal reveal-delay">
+            <span class="timeline-year">2022</span>
+            <div>
+              <h3>Doktora / Yüksek Lisans / Proje</h3>
+              <p>Akademik ilerleme, proje, yayın veya önemli bir dönüm noktası eklenebilir.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item glass reveal reveal-delay-2">
+            <span class="timeline-year">2019</span>
+            <div>
+              <h3>Önceki Görev / Eğitim</h3>
+              <p>Kariyer başlangıcı, eğitim süreci veya erken dönem deneyimleri yazılabilir.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">İletişim</span>
+          <h2>Ziyaretçilerin size hızlıca ulaşmasını sağlayın</h2>
+          <p>E-posta, kurum adresi, Google Scholar, ORCID ve diğer bağlantılar eklenebilir.</p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card glass reveal">
+            <h3>İletişim Bilgileri</h3>
+            <ul class="contact-list">
+              <li><strong>E-posta:</strong> adiniz@universite.edu.tr</li>
+              <li><strong>Kurum:</strong> Fakülte / Bölüm Adı</li>
+              <li><strong>Şehir:</strong> İstanbul</li>
+            </ul>
+          </article>
+
+          <article class="contact-card glass reveal reveal-delay">
+            <h3>Akademik Bağlantılar</h3>
+            <ul class="contact-list">
+              <li><a href="#">Google Scholar</a></li>
+              <li><a href="#">ORCID</a></li>
+              <li><a href="#">ResearchGate</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Akademik Web Sitesi</p>
+      <a href="#top">Yukarı Dön</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
